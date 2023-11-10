@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
 :root {
   --Red: hsl(1, 90%, 64%);
-  --Blue: hsl(219, 85%, 26%);
+  --Blue: hsl(219, 71%, 35%);
   --White: hsl(0, 0%, 100%);
   --Light-grayish-blue: hsl(210, 60%, 98%);
   --Light-grayish-blue-1: hsl(211, 68%, 94%);
@@ -10,6 +11,7 @@
   --Dark-grayish-blue: hsl(219, 12%, 42%);
   --Dark-blue: hsl(224, 21%, 14%);
 }
+
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 0;
@@ -23,6 +25,7 @@ body {
   justify-content: center;
   background-color: var(--Light-grayish-blue);
 }
+
 .container {
   margin: 2rem;
   width: 700px;
@@ -30,16 +33,19 @@ body {
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
 }
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
+
 .notif_box {
   display: flex;
   align-items: center;
 }
+
 #notifes {
   background-color: var(--Blue);
   margin-left: 0.5rem;
@@ -52,29 +58,43 @@ header {
   font-weight: 800;
   border-radius: 0.5rem;
 }
+
 #mark_all {
   cursor: pointer;
+  color: var(--Dark-grayish-blue);
+  transition: color 0.3s;
 }
+
 #mark_all:hover {
   color: var(--Blue);
 }
+
 p {
   color: var(--Dark-grayish-blue);
 }
+
 main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .notification_card {
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
   padding: 1rem;
 }
+
+.notification_card:hover .user_activity a {
+  color: var(--Blue);
+}
+
 img {
   width: 50px;
+  cursor: pointer;
 }
+
 .description {
   flex: 1;
   margin-left: 1rem;
@@ -82,16 +102,20 @@ img {
   flex-direction: column;
   justify-content: space-between;
 }
+
 strong {
   color: var(--Dark-blue);
   cursor: pointer;
 }
+
 strong:hover {
   color: var(--Blue);
 }
+
 .unread {
   background-color: var(--Light-grayish-blue-1) !important;
 }
+
 .unread p:first-of-type::after {
   content: " ";
   background-color: var(--Red);
@@ -101,20 +125,26 @@ strong:hover {
   border-radius: 50%;
   margin-left: 0.5rem;
 }
+
 .message_card {
   display: flex;
   align-items: center;
 }
+
 .message {
-  padding: 1rem;
-  border: 1px solid var(--Light-grayish-blue-2);
+  padding: 2rem;
+  border: 1.5px solid var(--Light-grayish-blue-2);
   border-radius: 0.3rem;
   cursor: pointer;
   margin: 0 0 0 5rem;
+  margin-right: 2rem;
+  transition: background-color 0.3s;
 }
+
 .message:hover {
   background-color: var(--Light-grayish-blue-1);
 }
+
 .chess_img {
   margin-left: auto;
   align-self: flex-end;
